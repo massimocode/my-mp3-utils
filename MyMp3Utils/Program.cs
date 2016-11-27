@@ -5,9 +5,9 @@ namespace MyMp3Utils
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var mp3Paths = Directory.GetFiles(args[0], "*.mp3", SearchOption.AllDirectories);
+            var mp3Paths = Directory.GetFiles(@"D:\Music\", "*.mp3", SearchOption.AllDirectories);
             foreach (var mp3 in mp3Paths)
             {
                 var file = TagLib.File.Create(mp3);
